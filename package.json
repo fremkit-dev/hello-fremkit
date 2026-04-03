@@ -1,0 +1,12 @@
+{
+  "name": "hello-fremkit",
+  "version": "1.0.0",
+  "description": "Minimal Express hello-world for Fremkit demos",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.0"
+  }
+}

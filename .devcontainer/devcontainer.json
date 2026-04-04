@@ -1,6 +1,6 @@
 {
   "image": "mcr.microsoft.com/devcontainers/javascript-node:20",
   "forwardPorts": [3000],
-  "postCreateCommand": "npm install",
+  "postCreateCommand": "npm install && nohup node server.js > /tmp/server.log 2>&1 &",
   "remoteUser": "node"
 }

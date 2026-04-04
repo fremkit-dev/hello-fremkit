@@ -15,3 +15,13 @@ app.get('/', (req, res) => {
 });
 
 app.listen(port, () => console.log(`Server running on port ${port}`));
+
+// API server on port 8080 — demonstrates multi-port environments
+const apiApp = express();
+apiApp.get('/', (req, res) => {
+  res.json({ status: 'ok', service: 'API', version: '1.0.0', timestamp: new Date().toISOString() });
+});
+apiApp.get('/health', (req, res) => {
+  res.json({ healthy: true });
+});
+apiApp.listen(8080, () => console.log('API server running on port 8080'));
